@@ -1,5 +1,11 @@
 # Copyright 2026 Google LLC
-#
+illustration_agent = RemoteA2aAgent(
+    name="illustration_agent",
+    description="Agent that generates illustrations.",
+    agent_card=(
+        "illustration-agent-card.json"
+    ),
+)
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
