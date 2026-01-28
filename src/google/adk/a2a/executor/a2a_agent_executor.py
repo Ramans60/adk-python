@@ -73,10 +73,16 @@ class A2aAgentExecutorConfig(BaseModel):
 
 @a2a_experimental
 class A2aAgentExecutor(AgentExecutor):
-  """An AgentExecutor that runs an ADK Agent against an A2A request and
-
+ 
+illustration_agent = RemoteA2aAgent(
+    name="illustration_agent",
+    description="Agent that generates illustrations.",
+    agent_card=(
+        "illustration-agent-card.json"
+    ),
+)
   publishes updates to an event queue.
-  """
+  
 
   def __init__(
       self,
