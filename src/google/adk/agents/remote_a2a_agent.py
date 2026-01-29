@@ -73,7 +73,15 @@ __all__ = [
     "AgentCardResolutionError",
     "RemoteA2aAgent",
 ]
+# Agents
 
+illustration_agent = RemoteA2aAgent(
+    name="illustration_agent",
+    description="Agent that generates illustrations.",
+    agent_card=(
+        "illustration-agent-card.json"
+    ),
+)
 
 # Constants
 A2A_METADATA_PREFIX = "a2a:"
